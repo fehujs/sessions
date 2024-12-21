@@ -1,10 +1,13 @@
 import { cwd } from "process"
+import { join } from "path"
+import { pathToFileURL } from "url"
 
 let _config
 try {
-    _config = await import(cwd() + "/config/sessions.js")
+    const configPath = pathToFileURL(join(cwd(), "config", "sessions.js")).href
+    _config = (await import(configPath))
 } catch (e: any) {
-    console.log(`[sessions] config: config file not found, applying default config.`)
+    console.log(`[sessions] config: config file not found, applying default config.`, e)
     _config = {
         ID_COOKIE_NAME: "session_id",
         ID_COOKIE_EXPIRES: 1800000,
