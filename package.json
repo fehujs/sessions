@@ -1,0 +1,43 @@
+{
+  "name": "@fehujs/sessions",
+  "version": "0.1.0",
+  "description": "Fehujs sessions handling package",
+  "main": "build/index.js",
+  "type": "module",
+  "files": [
+    "./build/**/*",
+    "README.md",
+    "LICENCE"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "build:types": "tsc -d --declarationDir build --declarationMap --emitDeclarationOnly",
+    "release": "pnpm build && pnpm build:types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fehujs/sessions.git"
+  },
+  "keywords": [
+    "sessions"
+  ],
+  "author": "Pascal LLEONART",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fehujs/sessions/issues"
+  },
+  "homepage": "https://github.com/fehujs/sessions#readme",
+  "devDependencies": {
+    "@fehujs/build": "^0.1.1",
+    "@fehujs/tsconfig": "^1.0.0",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@fehujs/http-server": "^0.1.2"
+  }
+}
