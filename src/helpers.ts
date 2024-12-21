@@ -1,11 +1,9 @@
 import { randomBytes } from "crypto"
 
-import { Request, types as FHStypes } from "@fehujs/http-server"
+import { HttpContext, Request } from "@fehujs/http-server"
 
 import { CONFIG } from "./config"
 
-
-type HttpContext = FHStypes.HttpContext
 
 export function getSessionId(request: Request) {
     let sessionId = request.cookieHandler.getCookie(CONFIG.ID_COOKIE_NAME)
