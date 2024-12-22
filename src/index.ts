@@ -1,3 +1,4 @@
+import { CONFIG } from "./config"
 import { getSessionId, setSessionIdCookie } from "./helpers"
 import { SessionMiddleware } from "./middleware"
 
@@ -13,4 +14,5 @@ export {
     SessionConfig,
     SessionMiddleware,
     setSessionIdCookie,
+    CONFIG,
 }
