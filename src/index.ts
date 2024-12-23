@@ -10,9 +10,9 @@ type SessionConfig = {
 }
 
 export {
+    CONFIG,
     getSessionId,
     SessionConfig,
     SessionMiddleware,
     setSessionIdCookie,
-    CONFIG,
 }
