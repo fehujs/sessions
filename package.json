@@ -1,6 +1,6 @@
 {
   "name": "@fehujs/sessions",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Fehujs sessions handling package",
   "main": "build/index.js",
   "type": "module",
@@ -38,6 +38,6 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@fehujs/http-server": "^0.1.6"
+    "@fehujs/http-server": "^0.1.9"
   }
 }
